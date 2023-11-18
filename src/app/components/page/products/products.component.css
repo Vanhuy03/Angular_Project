@@ -1,0 +1,22 @@
+.discount{
+    z-index: 5;
+    position: relative;
+    margin: 0px 0px -40px 0px;
+    color: white;
+    background-color: #fb5849;
+}
+.imgdiscount{
+    z-index: 1;
+    position: absolute;
+}
+
+.red-color{
+    background-color: #fb5849;
+}
+.red-text{
+    color: #fb5849;
+}
+.bg-color{
+    background:rgb(233,238,245);
+}
+

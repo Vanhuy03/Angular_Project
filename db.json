@@ -1,0 +1,51 @@
+{
+  "product": [
+    {
+      "name": "Quần áo thể thao",
+      "price": 80000,
+      "image": "https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_01.jpg",
+      "desc": "Mô tả new âcscâcsc",
+      "id": 4
+    },
+    {
+      "name": "Sản phẩm đẹp trai",
+      "price": 202020202,
+      "image": "https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_01.jpg",
+      "desc": "Good",
+      "id": 5
+    },
+    {
+      "name": "Product 312",
+      "price": 1234,
+      "image": "https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_03.jpg",
+      "desc": "sản phẩm đẹp nhất 2023\n",
+      "id": 6
+    }
+  ],
+  "auth": [
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin2003",
+      "confirmPassword": "admin2003",
+      "role": "admin",
+      "id": 6
+    },
+    {
+      "name": "Nguyễn Văn Huy",
+      "email": "leohuy0387@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "name": "huydz",
+      "email": "huy345@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "role": "user",
+      "id": 8
+    }
+  ]
+}

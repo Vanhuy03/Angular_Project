@@ -1,0 +1,32 @@
+
+<div class="d-flex justify-content-between">
+    <h2>Manage Account</h2>
+    <button class="btn btn-primary me-32 w-28" routerLink="/admin/auth/add">Add</button>
+  </div>
+  <div class="table-responsive small">
+    <table class="table table-striped bordered table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of account;index as i">
+              <td>{{i + 1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.password}}</td>
+              <td>{{item.role}}</td>
+            
+              <td class="w-52">
+                <button class="btn btn-danger mr-3" (click)="removeAccount(item.id!)" >Xóa</button>
+                <button class="btn btn-success" routerLink="/admin/auth/{{item.id}}/edit">Sửa</button>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,31 @@
+<h5 class="mb-8">{{mode==="create"?"Thêm":"Cập nhật"}} Sản Phẩm</h5>
+<form  (ngSubmit)="onSubmit()" [formGroup]="productForm">
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên Sản Phẩm</label>
+        <input type="text" class="form-control" id="name" formControlName="name" >
+        <div
+            class="error"
+            *ngIf="
+            productForm.get('name')?.hasError('required') &&
+                (productForm.get('name')?.touched ||
+                productForm.get('name')?.dirty)
+            "
+        >
+            Name required
+        </div>
+       
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Giá Sản Phẩm</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Ảnh Sản Phẩm</label>
+        <input type="text" class="form-control" id="image" formControlName="image">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Mô Tả</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="desc"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">{{mode==="create"?"Thêm":"Cập nhật"}}</button>
+</form>

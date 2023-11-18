@@ -1,0 +1,25 @@
+.discount{
+    z-index: 5;
+    position: relative;
+    margin: 0px 0px -40px 0px;
+    color: white;
+    background-color: #fb5849;
+}
+.imgdiscount{
+    z-index: 1;
+    position: absolute;
+}
+.pricediscount{
+    z-index: 4;
+    position: absolute;
+    margin: -29px 0 0 0px;
+    width: 410px;
+    background-color: #fb5849;
+}
+.red-color{
+    background-color: #fb5849;
+}
+.red-text{
+    color: #fb5849;
+}
+

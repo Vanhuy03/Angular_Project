@@ -1,0 +1,83 @@
+<section class="container mx-auto mb-10">
+    <div class="text-center py-10">
+        <h5 class="text-3xl font-bold mb-5 ">Categories Product Off The Month</h5>
+        <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+    </div>
+    <div class="flex gap-10 text-center">
+    <div>
+        <img class="rounded-full" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_01.jpg" alt="">
+        <p class="py-5 text-2xl font-bold">Watches</p>
+        <button class="bg-green-400 h-12 w-32 w rounded-lg border mt-4 hover:bg-slate-300">Go Shop</button>
+    </div>
+    <div>
+        <img class="rounded-full" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_02.jpg" alt="">
+        <p class="py-5 text-2xl font-bold">Shoes</p>
+        <button class="bg-green-400 h-12 w-32 w rounded-lg border mt-4 hover:bg-slate-300">Go Shop</button>
+    </div>
+    <div>
+        <img class="rounded-full" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_03.jpg" alt="">
+        <p class="py-5 text-2xl font-bold">Accessories</p>
+        <button class="bg-green-400 h-12 w-32 w rounded-lg border mt-4 hover:bg-slate-300">Go Shop</button>
+    </div>
+</div>
+</section>
+<body class="bg-color">
+    <section class="container mx-auto py-28">
+        <div class="text-center">
+        <h5 class="text-3xl font-bold mb-5 ">Featured Product</h5>
+        <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident.</p>
+    </div>
+    <div class="flex gap-5 py-10">
+        <div *ngFor="let item of product;index as i"  class="rounded-lg bg-white p-4">
+            <img class="rounded-lg border mb-3" [src]="item.image" alt="">
+            <div class="flex justify-between ">
+                <h4 class="text-xl font-mono font-bold">{{item.name}}</h4>
+                <p class="text-xl font-mono font-semibold">{{item.price}}$</p>
+            </div>
+            <p class="my-5">Description:{{item.desc}}</p>
+            <div class="text-center">
+                <button class="w-52 h-12 mt-5 bg-green-400 rounded-lg border hover:bg-slate-200 " routerLink="product/{{item.id}}">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="flex gap-5 py-10">
+        <div class="rounded-lg  bg-white p-4 ">
+            <img class="rounded-lg border mb-3" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_01.jpg" alt="">
+            <div class="flex justify-between ">
+            <h4 class="text-xl font-mono font-bold">Gym Weight</h4>
+            <p class="text-xl font-mono font-semibold">200$</p>
+        </div>
+            <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.</p>
+            <div class="text-center">
+                <button class="w-52 h-12 mt-5 bg-green-400 rounded-lg border hover:bg-slate-200 ">Add To Cart</button>
+            </div>
+        </div>
+        <div class=" rounded-lg bg-white p-4">
+            <img class="rounded-lg border mb-3" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_02.jpg" alt="">
+            <div class="flex justify-between ">
+                <h4 class="text-xl font-mono font-bold">Apple Watch</h4>
+                <p class="text-xl font-mono font-semibold">200$</p>
+            </div>
+            <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.</p>
+            <div class="text-center">
+                <button class="w-52 h-12 mt-5 bg-green-400 rounded-lg border hover:bg-slate-200 ">Add To Cart</button>
+            </div>
+        </div>
+        <div class="rounded-lg  bg-white p-4">
+            <img class="rounded-lg border mb-3" src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_03.jpg" alt="">
+            <div class="flex justify-between ">
+                <h4 class="text-xl font-mono font-bold">Camera 360</h4>
+                <p class="text-xl font-mono font-semibold">200$</p>
+            </div>
+            <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.</p>
+            <div class="text-center">
+                <button class="w-52 h-12 mt-5 bg-green-400 rounded-lg border hover:bg-slate-200 ">Add To Cart</button>
+            </div>
+        </div>
+    </div> -->
+    </section> 
+</body>
+
+

@@ -1,0 +1,77 @@
+<div class="formAlign ">
+<form class="  w-80 p-3  bg-gray-400 mx-auto my-auto" (ngSubmit)="onSubmit()" [formGroup]="formSignup">
+    <h5 class="text-center my-3">Sign Up</h5>
+    <div class="mb-3">
+        <input class="form-control" type="text" formControlName="name" placeholder="Name" />
+    </div>
+    <div class="mb-3">
+        <input  class="form-control" type="email" formControlName="email" placeholder="Email" />
+        <div
+            class="error"
+            *ngIf="
+                formSignup.get('email')?.hasError('required') &&
+                (formSignup.get('email')?.touched ||
+                    formSignup.get('email')?.dirty)
+            "
+        >
+            Email required
+        </div>
+        <div
+            class="error"
+            *ngIf="
+                formSignup.get('email')?.hasError('email') &&
+                (formSignup.get('email')?.touched ||
+                    formSignup.get('email')?.dirty)
+            "
+        >
+            Email required
+        </div>
+    </div>
+    <div class="mb-3">
+        <input  class="form-control"
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+        />
+        <div
+            class="error"
+            *ngIf="
+                formSignup.get('password')?.hasError('required') &&
+                (formSignup.get('password')?.touched ||
+                    formSignup.get('password')?.dirty)
+            "
+        >
+            Password required
+        </div>
+        <div  class="form-control"
+            class="error"
+            *ngIf="
+                formSignup.get('password')?.hasError('minlength') &&
+                (formSignup.get('password')?.touched ||
+                    formSignup.get('password')?.dirty)
+            "
+        >
+            Min 6 character
+        </div>
+    </div>
+    <div class="mb-3">
+        <input  class="form-control"
+            type="password"
+            formControlName="confirmPassword"
+            placeholder="Confirm Password"
+        />
+
+        <div
+            class="error"
+            *ngIf="
+                formSignup?.hasError('notMatch') &&
+                (formSignup.get('confirmPassword')?.touched ||
+                    formSignup.get('confirmPassword')?.dirty)
+            "
+        >
+           Password is not match
+        </div>
+    </div>
+    <button class="btn btn-primary">Sign Up</button>
+</form>
+</div>
